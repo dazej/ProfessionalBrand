@@ -1,42 +1,63 @@
 #root {
-  max-width: 1280px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-content {
+  padding: 2.5rem 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ── Shared pixel utilities ── */
+
+.pixel-card {
+  background: #fffbf0;
+  border: 3px solid #3d2b1f;
+  box-shadow: 5px 5px 0px #3d2b1f;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.pixel-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  background: #7ec8e3;
+  color: #3d2b1f;
+  border: 3px solid #3d2b1f;
+  box-shadow: 4px 4px 0px #3d2b1f;
+  padding: 0.65rem 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.08s, box-shadow 0.08s;
+  line-height: 1.6;
 }
 
-.card {
-  padding: 2em;
+.pixel-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #3d2b1f;
 }
 
-.read-the-docs {
-  color: #888;
+.pixel-btn.orange {
+  background: #f4a261;
+}
+
+.pixel-btn.pink {
+  background: #f2b5c0;
+}
+
+.section-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85rem;
+  color: #3d2b1f;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 3px;
+  background: #3d2b1f;
 }

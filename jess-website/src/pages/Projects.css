@@ -1,0 +1,160 @@
+/* ── Projects ── */
+.projects-section {
+  margin-bottom: 3.5rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.project-header {
+  border-left: 6px solid #7ec8e3;
+  padding-left: 0.85rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #3d2b1f;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  max-width: 50%;
+  justify-content: flex-end;
+}
+
+.project-tag {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.4rem;
+  padding: 0.3rem 0.55rem;
+  border: 2px solid #3d2b1f;
+  color: #3d2b1f;
+  line-height: 1.8;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #5a3e2b;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ── Experience ── */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.experience-placeholder {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #7a5c3e;
+}
+
+.experience-placeholder code {
+  font-family: 'VT323', monospace;
+  font-size: 1.1rem;
+  background: #f2e0c8;
+  padding: 0.1rem 0.35rem;
+  border: 1px solid #a0785a;
+}
+
+.placeholder-note {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #a0785a;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.experience-company {
+  font-size: 0.7rem;
+  line-height: 1.6;
+  color: #3d2b1f;
+}
+
+.experience-role {
+  font-family: 'VT323', monospace;
+  font-size: 1.3rem;
+  color: #c0522b;
+  margin-top: 0.25rem;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.experience-dates {
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  color: #7a5c3e;
+  white-space: nowrap;
+}
+
+.experience-location {
+  font-family: 'VT323', monospace;
+  font-size: 1.1rem;
+  color: #a0785a;
+  white-space: nowrap;
+}
+
+.experience-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 0;
+}
+
+.experience-bullets li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5a3e2b;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.experience-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #c0522b;
+}
