@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fffbf0;
+  border-bottom: 3px solid #3d2b1f;
+  box-shadow: 0 4px 0 #3d2b1f;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.75rem;
+  color: #3d2b1f;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav-logo:hover {
+  color: #c0522b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  color: #3d2b1f;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid transparent;
+  line-height: 1.8;
+  transition: background 0.08s, border-color 0.08s, box-shadow 0.08s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #f4a261;
+  border: 2px solid #3d2b1f;
+  box-shadow: 3px 3px 0 #3d2b1f;
+  color: #3d2b1f;
+}

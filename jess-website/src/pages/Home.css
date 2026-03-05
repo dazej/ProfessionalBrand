@@ -1,0 +1,130 @@
+/* ── Hero ── */
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-greeting {
+  font-family: 'VT323', monospace;
+  font-size: 1.6rem;
+  color: #c0522b;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-name {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #3d2b1f;
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  color: #7a5c3e;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-bio {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #5a3e2b;
+  background: #fffbf0;
+  border: 3px solid #3d2b1f;
+  box-shadow: 5px 5px 0 #3d2b1f;
+  padding: 1rem 1.25rem;
+  max-width: 520px;
+}
+
+/* ── Photos ── */
+.hero-photos {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.photo-frame {
+  border: 3px solid #3d2b1f;
+  box-shadow: 5px 5px 0 #3d2b1f;
+  background: #fffbf0;
+  padding: 0.5rem;
+}
+
+.photo-placeholder {
+  width: 160px;
+  height: 190px;
+  background: #f2e0c8;
+  border: 2px dashed #a0785a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #a0785a;
+  font-family: 'VT323', monospace;
+  font-size: 1rem;
+}
+
+.photo-placeholder span {
+  font-size: 2rem;
+}
+
+.photo-img {
+  width: 160px;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Skills ── */
+.skills-section {
+  margin-top: 1rem;
+}
+
+.skills-category {
+  margin-bottom: 1.5rem;
+}
+
+.skills-category-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
+  color: #7a5c3e;
+  margin-bottom: 0.65rem;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.skill-badge {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  background: #f4845f;
+  border: 2px solid #3d2b1f;
+  box-shadow: 3px 3px 0 #3d2b1f;
+  color: #3d2b1f;
+  line-height: 1.8;
+}
+
+.skill-badge.badge-blue {
+  background: #f4a261;
+}
+
+.skill-badge.badge-green {
+  background: #f7c59f;
+}
