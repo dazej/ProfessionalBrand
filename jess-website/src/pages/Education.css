@@ -120,3 +120,57 @@
   font-size: 1.2rem;
   color: #7a5c3e;
 }
+
+/* ── Achievements dropdown ── */
+.edu-card .edu-achievements-toggle {
+  font-size: 0.5rem;
+  align-self: flex-start;
+  margin-top: 0.75rem;
+  background: #97ba8c;
+}
+
+.edu-achievements {
+  list-style: none;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  border-top: 2px dashed #c0522b;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edu-achievements li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5a3e2b;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.edu-achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #c0522b;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .edu-right {
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .edu-card .edu-achievements-toggle {
+    width: 100%;
+    text-align: left;
+  }
+
+  .edu-achievements {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .edu-achievements li {
+    font-size: 1.15rem;
+  }
+}

@@ -61,3 +61,10 @@
   height: 3px;
   background: #3d2b1f;
 }
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+}

@@ -60,6 +60,36 @@
   flex-wrap: wrap;
 }
 
+/* ── Project Highlights Dropdown ── */
+.project-highlights-toggle {
+  font-size: 0.4rem;
+}
+
+.project-highlights {
+  list-style: none;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  border-top: 2px dashed #c0522b;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-highlights li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5a3e2b;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.project-highlights li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #c0522b;
+}
+
 /* ── Experience ── */
 .experience-list {
   display: flex;
@@ -157,4 +187,31 @@
   position: absolute;
   left: 0;
   color: #c0522b;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .project-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-tags {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .experience-meta {
+    align-items: flex-start;
+  }
+
+  .experience-dates,
+  .experience-location {
+    white-space: normal;
+  }
 }

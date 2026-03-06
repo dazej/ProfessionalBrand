@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 1rem 2rem;
   background: #fffbf0;
   border-bottom: 3px solid #3d2b1f;
@@ -23,9 +24,43 @@
   color: #c0522b;
 }
 
+/* ── Hamburger button (hidden on desktop) ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #3d2b1f;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+/* X state when open */
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ── Nav links ── */
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-link {
@@ -45,4 +80,69 @@
   border: 2px solid #3d2b1f;
   box-shadow: 3px 3px 0 #3d2b1f;
   color: #3d2b1f;
+}
+
+.nav-resume-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  color: #3d2b1f;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #3d2b1f;
+  background: #f4a261;
+  box-shadow: 3px 3px 0 #3d2b1f;
+  line-height: 1.8;
+  transition: background 0.08s, box-shadow 0.08s;
+  white-space: nowrap;
+}
+
+.nav-resume-btn:hover {
+  background: #e08040;
+  box-shadow: 1px 1px 0 #3d2b1f;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    border-top: 2px solid #3d2b1f;
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link,
+  .nav-resume-btn {
+    width: 100%;
+    display: block;
+    padding: 0.75rem 0.5rem;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px dashed #c0a080;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    border: none;
+    border-bottom: 1px dashed #c0a080;
+    box-shadow: none;
+  }
+
+  .nav-resume-btn {
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: #c0522b;
+  }
 }
