@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './Projects.css'
 
 const projects = [
@@ -9,15 +10,24 @@ const projects = [
     live: null,
     tags: ['JavaScript', 'HTML', 'CSS', 'React', 'Node.js', 'Express.js', 'MongoDB Atlas', 'OAuth', 'Unit Testing', 'QA Testing'],
     color: '#7ec8e3',
+    highlights: [
+      'Architected and developed a full-stack planning application using React.js, Node.js, and MongoDB Atlas, implementing OAuth authentication and a dynamic scheduling system.',
+      'Implemented unit testing and QA reviews across all stages of the project, ensuring consistent bug identification and removal.',
+    ],
   },
   {
     title: 'ODEV.v2',
     description:
-      'The second iteration of ODEV — an upgraded development project featuring improved architecture and expanded functionality over the original version.',
+      'A full-stack e-commerce platform with a complete product catalog, user authentication, and order management — rebuilt from the ground up with a redesigned architecture and expanded functionality.',
     github: 'https://github.com/dazej/ODEV.v2',
     live: null,
     tags: ['JavaScript', 'HTML', 'CSS', 'React', 'Node.js', 'Express.js', 'PostgreSQL', 'SQL', 'Unit Testing', 'QA Testing'],
     color: '#f2b5c0',
+    highlights: [
+      'Architected and developed a full-stack e-commerce platform using React.js, Node.js, and PostgreSQL, implementing user authentication and a complete product catalog.',
+      'Led as co-scrum master, managing sprint planning, daily standups, and code reviews that resulted in on-time delivery of all project milestones.',
+      'Consistently implemented QA testing for all stages of the project, ensuring bug identification and removal.',
+    ],
   },
 ]
 
@@ -62,6 +72,8 @@ const experience = [
 ]
 
 export default function Projects() {
+  const [openProject, setOpenProject] = useState(null)
+
   return (
     <div className="projects-page">
 
@@ -69,43 +81,62 @@ export default function Projects() {
       <section className="projects-section">
         <h2 className="section-title">Projects</h2>
         <div className="project-list">
-          {projects.map((project) => (
-            <div key={project.title} className="project-card pixel-card">
-              <div className="project-header" style={{ borderLeftColor: project.color }}>
-                <h3 className="project-title">{project.title}</h3>
-                <div className="project-tags">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="project-tag" style={{ background: project.color }}>
-                      {tag}
-                    </span>
-                  ))}
+          {projects.map((project) => {
+            const isOpen = openProject === project.title
+            return (
+              <div key={project.title} className="project-card pixel-card">
+                <div className="project-header" style={{ borderLeftColor: project.color }}>
+                  <h3 className="project-title">{project.title}</h3>
+                  <div className="project-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="project-tag" style={{ background: project.color }}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <p className="project-description">{project.description}</p>
-              <div className="project-links">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="pixel-btn"
-                  >
-                    &#128279; GitHub
-                  </a>
+                <p className="project-description">{project.description}</p>
+                <div className="project-links">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pixel-btn"
+                    >
+                      &#128279; GitHub
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pixel-btn orange"
+                    >
+                      &#9654; Live Site
+                    </a>
+                  )}
+                  {project.highlights && (
+                    <button
+                      className="pixel-btn project-highlights-toggle"
+                      style={{ borderColor: project.color, background: isOpen ? project.color : 'transparent' }}
+                      onClick={() => setOpenProject(isOpen ? null : project.title)}
+                    >
+                      {isOpen ? '▴ Hide Details' : '▾ View Details'}
+                    </button>
+                  )}
+                </div>
+                {isOpen && project.highlights && (
+                  <ul className="project-highlights">
+                    {project.highlights.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
                 )}
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="pixel-btn orange"
-                  >
-                    &#9654; Live Site
-                  </a>
-                )}
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </section>
 

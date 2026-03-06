@@ -71,7 +71,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={5}
-                  placeholder="Lets connect! Write your message here."
+                  placeholder="Let's connect! Write your message here."
                   required
                 />
               </div>
@@ -96,9 +96,24 @@ export default function Contact() {
         {/* ── Links ── */}
         <div className="contact-links-col">
           <div className="pixel-card contact-link-card">
+            <h3 className="contact-card-title">&#9670; GitHub</h3>
+            <p className="contact-link-desc">
+              Browse my projects and code.
+            </p>
+            <a
+              href="https://github.com/dazej"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pixel-btn"
+            >
+              &#128279; View Profile
+            </a>
+          </div>
+
+          <div className="pixel-card contact-link-card">
             <h3 className="contact-card-title">&#9670; LinkedIn</h3>
             <p className="contact-link-desc">
-              Connect with me professionally or check out my career history.
+              Connect with me on LinkedIn.
             </p>
             <a
               href="https://www.linkedin.com/in/jessicaadams555"

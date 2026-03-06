@@ -128,3 +128,37 @@
 .skill-badge.badge-green {
   background: #f7c59f;
 }
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-text {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .hero-name {
+    font-size: 1.1rem;
+  }
+
+  .hero-bio {
+    max-width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .hero-photos {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .photo-img,
+  .photo-placeholder {
+    width: 130px;
+    height: 155px;
+  }
+}

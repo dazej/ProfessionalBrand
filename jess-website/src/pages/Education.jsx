@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './Education.css'
 
 const degrees = [
@@ -9,6 +10,10 @@ const degrees = [
     status: 'In Progress',
     dates: '— Expected Dec 2026',
     color: '#7ec8e3',
+    achievements: [
+      'National Society of Leadership and Success Member',
+      'Academic Achievement Award',
+    ],
   },
   {
     school: 'University of North Florida',
@@ -18,6 +23,10 @@ const degrees = [
     status: 'Completed',
     dates: '2023',
     color: '#f2b5c0',
+    achievements: [
+      'Graduated Summa Cum Laude',
+      "Dean's List",
+    ],
   },
 ]
 
@@ -37,6 +46,11 @@ const certifications = [
 ]
 
 export default function Education() {
+  const [openAchievements, setOpenAchievements] = useState({})
+
+  const toggleAchievements = (school) =>
+    setOpenAchievements(prev => ({ ...prev, [school]: !prev[school] }))
+
   return (
     <div className="education-page">
 
@@ -68,6 +82,24 @@ export default function Education() {
                   <span className="edu-dates">{item.dates}</span>
                 </div>
               </div>
+
+              {item.achievements && item.achievements.length > 0 && (
+                <>
+                  <button
+                    className="edu-achievements-toggle pixel-btn"
+                    onClick={() => toggleAchievements(item.school)}
+                  >
+                    {openAchievements[item.school] ? '▾' : '▸'} Achievements
+                  </button>
+                  {openAchievements[item.school] && (
+                    <ul className="edu-achievements">
+                      {item.achievements.map((a) => (
+                        <li key={a}>{a}</li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              )}
             </div>
           ))}
         </div>

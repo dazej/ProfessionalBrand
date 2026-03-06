@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.25rem 2rem;
+  border-top: 3px solid #3d2b1f;
+  background: #fffbf0;
+  margin-top: 2rem;
+}
+
+.footer-name {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  color: #3d2b1f;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
+  color: #c0522b;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-family: 'VT323', monospace;
+  font-size: 1.1rem;
+  color: #a0785a;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
