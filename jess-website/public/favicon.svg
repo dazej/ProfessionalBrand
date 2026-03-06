@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <!-- Monitor body -->
+  <rect x="2" y="3" width="28" height="21" fill="#c8a87a"/>
+  <!-- Body shadow edge (bottom + right) -->
+  <rect x="2" y="23" width="28" height="1" fill="#8a6840"/>
+  <rect x="29" y="3" width="1" height="21" fill="#8a6840"/>
+  <!-- Body highlight edge (top + left) -->
+  <rect x="2" y="3" width="28" height="1" fill="#e8c89a"/>
+  <rect x="2" y="3" width="1" height="21" fill="#e8c89a"/>
+  <!-- Screen bezel (dark border inside monitor) -->
+  <rect x="4" y="5" width="23" height="16" fill="#3d2b1f"/>
+  <!-- Screen glass -->
+  <rect x="5" y="6" width="21" height="14" fill="#0d1a0a"/>
+  <!-- Phosphor scan lines (green on dark) -->
+  <rect x="6" y="8"  width="13" height="1" fill="#6ec45a"/>
+  <rect x="6" y="10" width="9"  height="1" fill="#6ec45a"/>
+  <rect x="6" y="12" width="11" height="1" fill="#6ec45a"/>
+  <rect x="6" y="14" width="7"  height="1" fill="#6ec45a"/>
+  <!-- Blinking cursor -->
+  <rect x="17" y="14" width="2" height="2" fill="#6ec45a"/>
+  <!-- Screen glare fleck -->
+  <rect x="22" y="7" width="2" height="1" fill="#a0e880" opacity="0.4"/>
+  <!-- Vent dots on body -->
+  <rect x="25" y="7"  width="2" height="1" fill="#a08050"/>
+  <rect x="25" y="9"  width="2" height="1" fill="#a08050"/>
+  <rect x="25" y="11" width="2" height="1" fill="#a08050"/>
+  <!-- Power LED -->
+  <rect x="25" y="21" width="2" height="1" fill="#6ec45a"/>
+  <!-- Neck -->
+  <rect x="13" y="24" width="6" height="2" fill="#b09060"/>
+  <!-- Base -->
+  <rect x="9"  y="26" width="14" height="3" fill="#c8a87a"/>
+  <rect x="9"  y="28" width="14" height="1" fill="#8a6840"/>
+</svg>
