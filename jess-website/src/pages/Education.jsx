@@ -8,7 +8,7 @@ const degrees = [
     field: 'Information Systems Technology',
     concentration: 'Application Development',
     status: 'In Progress',
-    dates: '— Expected Dec 2026',
+    dates: '— Expected Dec 2027',
     color: '#7ec8e3',
     achievements: [
       'National Society of Leadership and Success Member',
@@ -56,7 +56,7 @@ const certifications = [
     color: '#f4a261',
   },
   {
-    name: 'CompTIA A+ IT Operations Specialist',
+    name: 'CompTIA IT Operations Specialist',
     issuer: 'CompTIA',
     year: 'Completed 2026',
     color: '#b5d5a8',
@@ -66,6 +66,12 @@ const certifications = [
     issuer: 'CompTIA',
     year: 'Completed 2026',
     color: '#7ec8e3',
+  },
+  {
+    name: 'Certified in Cybersecurity (CC)',
+    issuer: 'ISC2',
+    year: 'Completed 2026',
+    color: '#f4a261',
   },
 ]
 
