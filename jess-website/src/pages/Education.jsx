@@ -43,6 +43,30 @@ const certifications = [
     year: 'Completed 2024',
     color: '#b5d5a8',
   },
+  {
+  name: 'CompTIA Security+',
+  issuer: 'CompTIA',
+  year: 'Completed 2026',
+  color: '#7ec8e3',
+},
+  {
+    name: 'CompTIA Network+',
+    issuer: 'CompTIA',
+    year: 'Completed 2026',
+    color: '#f4a261',
+  },
+  {
+    name: 'CompTIA A+ IT Operations Specialist',
+    issuer: 'CompTIA',
+    year: 'Completed 2026',
+    color: '#b5d5a8',
+  },
+  {
+    name: 'CompTIA Secure Infrastructure Specialist',
+    issuer: 'CompTIA',
+    year: 'Completed 2026',
+    color: '#7ec8e3',
+  },
 ]
 
 export default function Education() {
